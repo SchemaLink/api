@@ -14,7 +14,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_THREAD_ID = os.getenv("OPENAI_THREAD_ID")
 OPENAI_ASSISTANT_ID = os.getenv("OPENAI_ASSISTANT_ID")
 
-app = FastAPI()
+app = FastAPI(docs_url="/api/docs/", redoc_url="/api/redoc/")
 
 app.add_middleware(
     CORSMiddleware,
